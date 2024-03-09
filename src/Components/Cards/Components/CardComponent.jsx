@@ -13,7 +13,7 @@ import CardActionbar from "./CardActionBar";
 
 export default function CardComponent({card}) {
   return (
-    <Card sx={{ width: 250, m: 2 }}>
+  <Card sx={{ width: 250, m: 2 }}>
     <CardActionArea>
       <CardImageComponent image={card.image}/>
       <CardBodyComponent title={card.title} subtitle={card.subtitle} phone={card.phone} adress ={card.address} cardNumber={card.bizNumber}/>
