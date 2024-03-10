@@ -4,15 +4,17 @@ import MyComponent from "./Components/MyComponent.jsx";
 import TasksPage from "./Tasks/TasksPage.jsx";
 import CardsPage from "./Components/Cards/Components/CardsPage.jsx";
 import Counter from "./Components/Counter.jsx";
+import MyBox from "./Components/MyBox.jsx";
+import MyBox2 from "./Components/MyBox2.jsx";
 function App() {
   const myStyle ={
-    display:"flex",
-    flexDirection:"column",
-    justifyContent:"center", 
-    alignItems:"center",
-    width:"100vw",
-    height:"100vh",
-    backgroundColor:"beige"
+    display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "center",
+  width: "100vw",
+  height: "100vh",
+  backgroundColor: "beige"
   }
 
   return (
@@ -35,6 +37,14 @@ function App() {
     
       <Box sx={myStyle}>
         <Counter/>
+      </Box>
+
+      <Box sx={myStyle}>
+        <MyBox/>
+      </Box>
+
+      <Box sx={myStyle}>
+        <MyBox2/>
       </Box>
     </>
   )
