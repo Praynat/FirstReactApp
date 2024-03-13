@@ -98,6 +98,13 @@ const cards = [
 // const cards = []
 export default function CardsPage() {
   
+  const handleCardDelete= (id)=>{
+    console.log("you deleted  card no"+ id);
+  }
+  const handleCardLike= (id)=>{
+    console.log("you liked  card no"+ id);
+  }
+
   return  cards.length===0 ?
   (<Typography>
     Ooops... it seems there is no business cards to display
@@ -110,7 +117,12 @@ export default function CardsPage() {
 
    
     <Container sx={{display:"flex", flexWrap:"Wrap"}}>
-      {cards.map((card)=><CardComponent card={card}/>)}
+      {cards.map((card)=>(
+      <CardComponent 
+        card={card} 
+        handleCardDelete={handleCardDelete}
+        handleCardLike={handleCardLike}/>
+      ))}
     </Container>
     </>
 

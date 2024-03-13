@@ -1,6 +1,6 @@
   import React from 'react';
 import Task from './Task';
-import {Card, CardHeader, Typography } from '@mui/material';
+import {Typography } from '@mui/material';
 
 
 
@@ -19,16 +19,13 @@ export default function TasksPage() {
 
     const mySearch="";
 
+
   return tasks.length===0 ?
   (<Typography>
     Ooops... it seems there is no tasks to display
   </Typography>)
   :(
     <>
-    <Card sx={{m:"1rem"}}>
-        <CardHeader title={"Tasks"} >
-        </CardHeader>
-    </Card>
     <Task myTasks={tasks} mySearch={mySearch}/>
     </>
   )

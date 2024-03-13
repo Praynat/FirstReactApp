@@ -5,12 +5,12 @@ export default function MyBox2() {
   const [mySize, setmySize] = useState(10);
   const increaseSize = () => {
     if (mySize <= 200) {
-      setmySize(mySize + 10);
+      setmySize((prev) => prev + 10);
     }
   };
   const decreaseSize = () => {
     if (mySize > 10) {
-      setmySize(mySize - 10);
+      setmySize((prev) => prev - 10);
     }
   };
 

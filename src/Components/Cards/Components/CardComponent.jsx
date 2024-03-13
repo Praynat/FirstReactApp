@@ -11,7 +11,7 @@ import CardBodyComponent from "./CardBodyComponent";
 
 import CardActionbar from "./CardActionBar";
 
-export default function CardComponent({card}) {
+export default function CardComponent({card,handleCardDelete,handleCardLike}) {
   return (
   <Card sx={{ width: 250, m: 2 }}>
     <CardActionArea>
@@ -19,7 +19,11 @@ export default function CardComponent({card}) {
       <CardBodyComponent title={card.title} subtitle={card.subtitle} phone={card.phone} adress ={card.address} cardNumber={card.bizNumber}/>
     </CardActionArea>
 
-    <CardActionbar/>
+    <CardActionbar 
+    handleCardDelete={handleCardDelete}
+    handleCardLike={handleCardLike}
+    cardId={card._id}
+    />
   </Card>
 );
 }

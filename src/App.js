@@ -6,6 +6,8 @@ import CardsPage from "./Components/Cards/Components/CardsPage.jsx";
 import Counter from "./Components/Counter.jsx";
 import MyBox from "./Components/MyBox.jsx";
 import MyBox2 from "./Components/MyBox2.jsx";
+import AddNewTask from "./Tasks/AddNewTask.jsx";
+import FormPage from "./Components/Form Page.jsx";
 function App() {
   const myStyle ={
     display: "flex",
@@ -32,6 +34,7 @@ function App() {
       </Box>
 
       <Box sx={myStyle}>
+        <AddNewTask/>
         <TasksPage/>
       </Box>
     
@@ -45,6 +48,10 @@ function App() {
 
       <Box sx={myStyle}>
         <MyBox2/>
+      </Box>
+
+      <Box sx={myStyle}>
+        <FormPage/>
       </Box>
     </>
   )
